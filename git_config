@@ -1,0 +1,28 @@
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = 1
+[core]
+  excludesfile = ~/.git_ignore
+  editor = subl -w
+  autocrlf = input
+[format]
+  pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
+[alias]
+  b = branch -a -v
+  c = commit -m
+  a = add
+  ap = add -p
+  co = checkout
+  d = diff --word-diff
+  pl = pull --rebase
+  ps = push
+  s = statu
+[user]
+  name = mat
+  email = matpataki@gmail.com
+[credential]
+  helper = osxkeychain
+[help]
+  autocorrect = 1
