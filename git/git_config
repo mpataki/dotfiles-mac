@@ -4,7 +4,7 @@
   branch = auto
   ui = 1
 [core]
-  excludesfile = ~/.git_ignore
+  excludesfile = ~/.gitignore
   editor = subl -w
   autocrlf = input
 [format]
@@ -18,7 +18,7 @@
   d = diff --word-diff
   pl = pull --rebase
   ps = push
-  s = statu
+  s = status
 [user]
   name = mat
   email = matpataki@gmail.com
