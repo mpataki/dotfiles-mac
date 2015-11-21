@@ -1,0 +1,19 @@
+alias e='subl .' # TODO install the subl command in the install script
+
+# git
+alias g='git'
+alias gadd='git add -u && git add . && git status'
+alias gs='git s'
+alias gap='git ap'
+alias ga='git a'
+alias gc='git c'
+alias gpl='git pl'
+alias gps='git ps'
+alias gup='git up'
+alias gmm='git merge master'
+
+# ruby
+alias be='bundle exec'
+
+# system
+alias ls='ls -G' # turn on colors

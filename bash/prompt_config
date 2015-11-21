@@ -1,0 +1,38 @@
+GREEN="\[\033[0;32m\]"
+WHITE="\[\033[1;37m\]"
+RED="\[\033[1;31m\]"
+NONE="\[\033[0m\]"
+
+function _parse_git_stash {
+  git stash list 2> /dev/null | wc -l | awk '{print $1}'
+}
+
+function _parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1 /"
+}
+
+function _parse_git_part {
+  echo -n "$(_parse_git_branch)"
+}
+
+function _parse_ruby_version {
+  rbenv version-name
+}
+
+function _parse_ruby_part {
+  echo -n "(ruby-$(_parse_ruby_version))"
+}
+
+function _print_prompt {
+  printf "$RED$(_parse_git_part)$NONE"
+}
+
+function exitstatus {
+  EXITSTATUS="$?"
+
+  PS1="\n\[\033[0;32m\]\w\[\033[0m\] $(_print_prompt)\n# "
+
+  echo -ne "\033]0;${PWD##*/}\007"
+}
+
+PROMPT_COMMAND=exitstatus
