@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-# TODO consider linking these instead of
 ln bash_profile $HOME/.bash_profile
 ln git/git_config $HOME/.gitconfig
 ln git/git_ignore $HOME/.gitignore
