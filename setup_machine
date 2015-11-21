@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# install homebrew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew install git
+brew install z
+brew install rbenv
+
+install_config_files
+
+#TODO setup subl
