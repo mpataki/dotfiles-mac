@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-ln bash_profile $HOME/.bash_profile
+echo "linking $HOME/.gitconfig"
 ln git/git_config $HOME/.gitconfig
+
+echo "linking $HOME/.gitignore"
 ln git/git_ignore $HOME/.gitignore
 
+echo "writing $HOME/.bash_profile"
+echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
 . $HOME/.bash_profile
 
 # TODO

@@ -1,0 +1,16 @@
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# source bash configs
+. $SCRIPT_DIR/prompt_config
+. $SCRIPT_DIR/colour_config
+. $SCRIPT_DIR/aliases
+
+# TODO load git's autocomplete script
+
+# z command
+. `brew --prefix`/etc/profile.d/z.sh
+
+# subl command
+if [ -d /Applications/Sublime\ Text.app/Contents/SharedSupport/bin ]; then
+  PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
+fi
