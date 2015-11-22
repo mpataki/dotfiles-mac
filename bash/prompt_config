@@ -30,7 +30,7 @@ function _print_prompt {
 function exitstatus {
   EXITSTATUS="$?"
 
-  PS1="\n\[\033[0;32m\]\w\[\033[0m\] $(_print_prompt)\n# "
+  PS1="\n$GREEN\w$NONE $(_print_prompt) \n♦ "
 
   echo -ne "\033]0;${PWD##*/}\007"
 }
