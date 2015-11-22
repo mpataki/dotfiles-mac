@@ -5,7 +5,10 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $SCRIPT_DIR/colour_config
 . $SCRIPT_DIR/aliases
 
-# TODO load git's autocomplete script
+# load git's autocompletion script
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
 
 # z command
 . `brew --prefix`/etc/profile.d/z.sh
@@ -14,3 +17,4 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ -d /Applications/Sublime\ Text.app/Contents/SharedSupport/bin ]; then
   PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
 fi
+
