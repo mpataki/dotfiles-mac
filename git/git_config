@@ -18,7 +18,7 @@
   d = diff --word-diff
   pl = pull --rebase
   ps = push
-  s = status
+  s = status --short
 [user]
   name = mat
   email = matpataki@gmail.com
