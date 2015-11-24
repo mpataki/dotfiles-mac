@@ -18,3 +18,7 @@ if [ -d /Applications/Sublime\ Text.app/Contents/SharedSupport/bin ]; then
   PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
 fi
 
+# rbenv
+if [ -d /Users/mat/.rbenv ]; then
+  eval "$(rbenv init -)"
+fi
