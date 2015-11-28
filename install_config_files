@@ -36,3 +36,7 @@ echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
 # TODO
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
+
+# TODO check if sublime exists
+#   refactor linking functions a bit to take any path
+#   link the sublime prefs
