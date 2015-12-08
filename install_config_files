@@ -2,41 +2,71 @@
 
 function link_file() {
   source_file=$1
-  destination_file=$2
+  destination=$2
 
-  echo "linking $HOME/$destination_file"
-  ln $source_file $HOME/$destination_file
+  echo "linking $destination"
+  ln "$source_file" "$destination"
 }
 
 function check_and_link_file() {
   source_file=$1
-  destination_file=$2
-
-  if [ -f $HOME/$destination_file ]; then
-    read -p "~/$destination_file already exists. Do you want to override it? (yes/no)" yn
+  destination=$2
+  if [[ -f $destination ]]; then
+    read -p "$destination already exists. Do you want to override it? (yes/no)" yn
     case $yn in
       yes )
-        rm $HOME/$destination_file
-        link_file $source_file $destination_file
+        rm "$destination"
+        link_file "$source_file" "$destination"
         ;;
       * ) echo 'skipping...';;
     esac
   else
-    link_file $source_file $destination_file
+    link_file "$source_file" "$destination"
   fi
 }
 
-check_and_link_file git/git_config .gitconfig
-check_and_link_file git/git_ignore .gitignore
+function write_bash_profile() {
+  echo "writing $HOME/.bash_profile"
+  echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
+  . $HOME/.bash_profile
+}
 
-echo "writing $HOME/.bash_profile"
-echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
-. $HOME/.bash_profile
+function sublime_path() {
+  local sublime=$1
+  echo "$HOME/Library/Application Support/$sublime"
+}
+
+function sublime_pref_path() {
+  local sublime=$1
+  echo "$(sublime_path "$sublime")/Packages/User/Preferences.sublime-settings"
+}
+
+function check_and_link_sublime() {
+  local st=$1
+  if [[ -d $(sublime_path "$st") ]]; then
+    check_and_link_file 'sublime/Preferences.sublime-settings' "$(sublime_pref_path "$st")"
+  fi
+}
+
+check_and_link_file git/git_config $HOME/.gitconfig
+check_and_link_file git/git_ignore $HOME/.gitignore
+
+# bash profile
+if [ -f $HOME/.bash_profile ]; then
+  read -p "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)" yn
+  case $yn in
+    yes ) write_bash_profile;;
+    * ) echo 'skipping...';;
+  esac
+else
+  write_bash_profile
+fi
+
+# sublime prefs
+check_and_link_sublime 'Sublime Text'
+check_and_link_sublime 'Sublime Text 2'
+check_and_link_sublime 'Sublime Text 3'
 
 # TODO
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
-
-# TODO check if sublime exists
-#   refactor linking functions a bit to take any path
-#   link the sublime prefs
