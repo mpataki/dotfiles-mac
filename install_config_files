@@ -48,10 +48,19 @@ function check_and_link_sublime() {
   fi
 }
 
+#################### GIT SETUP ####################
 check_and_link_file git/git_config $HOME/.gitconfig
 check_and_link_file git/git_ignore $HOME/.gitignore
 
-# bash profile
+if ! [ -f `brew --prefix`/etc/bash_completion ]; then
+  read -p "Git bash_completion not installed. Do you want to install it? (yes/no)" yn
+  case $yn in
+    yes ) brew install git bash-completion;;
+    * ) echo 'skipping...';;
+  esac
+fi
+
+################## BASH PROFILE ##################
 if [ -f $HOME/.bash_profile ]; then
   read -p "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)" yn
   case $yn in
@@ -62,7 +71,7 @@ else
   write_bash_profile
 fi
 
-# sublime prefs
+################# SUBLIME SETUP #################
 check_and_link_sublime 'Sublime Text'
 check_and_link_sublime 'Sublime Text 2'
 check_and_link_sublime 'Sublime Text 3'
@@ -70,11 +79,3 @@ check_and_link_sublime 'Sublime Text 3'
 # TODO
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
-
-if ! [ -f `brew --prefix`/etc/bash_completion ]; then
-  read -p "Git bash_completion not installed. Do you want to install it? (yes/no)" yn
-  case $yn in
-    yes ) brew install git bash-completion;;
-    * ) echo 'skipping...';;
-  esac
-fi
