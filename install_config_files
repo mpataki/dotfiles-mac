@@ -41,10 +41,16 @@ function sublime_pref_path() {
   echo "$(sublime_path "$sublime")/Packages/User/Preferences.sublime-settings"
 }
 
+function sublime_key_binding_path() {
+  local sublime=$1
+  echo "$(sublime_path "$sublime")/Packages/User/Default (OSX).sublime-keymap"
+}
+
 function check_and_link_sublime() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
     check_and_link_file 'sublime/Preferences.sublime-settings' "$(sublime_pref_path "$st")"
+    check_and_link_file 'sublime/key_bindings.json' "$(sublime_key_binding_path "$st")"
   fi
 }
 

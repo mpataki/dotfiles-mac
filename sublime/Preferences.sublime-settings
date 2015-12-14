@@ -15,14 +15,9 @@
     "_site"
   ],
   "font_size": 12,
-  "ignored_packages":
-  [
-    "Theme - Spacefunk",
-    "Vintage"
-  ],
   "save_on_focus_lost": true,
   "scroll_past_end": true,
   "tab_size": 2,
   "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true
+  "trim_trailing_white_space_on_save": true,
 }
