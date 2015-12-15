@@ -1,23 +1,24 @@
 {
-  "ensure_newline_at_eof_on_save": true,
-  "file_exclude_patterns":
-  [
-    "*/coverage/*",
-    "*.swo",
-    ".tags",
-    ".tags_sorted_by_file",
-    "*.sql",
-    "*.csv"
-  ],
-  "folder_exclude_patterns":
-  [
-    ".git",
-    "_site"
-  ],
-  "font_size": 12,
-  "save_on_focus_lost": true,
-  "scroll_past_end": true,
-  "tab_size": 2,
-  "translate_tabs_to_spaces": true,
-  "trim_trailing_white_space_on_save": true,
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*/coverage/*",
+		"*.swo",
+		".tags",
+		".tags_sorted_by_file",
+		"*.sql",
+		"*.csv"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		"_site"
+	],
+	"font_size": 12,
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
