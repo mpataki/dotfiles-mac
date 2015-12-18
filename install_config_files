@@ -75,8 +75,12 @@ function check_and_link_sublime() {
 function install_sublime_packages() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
-    print_with_color $GREEN 'Installing Package Control'
-    wget https://packagecontrol.io/Package%20Control.sublime-package -O "$(sublime_package_control_path "$st")".
+
+    #################### PACKAGE CONTROL ####################
+    if ! [ -f "$(sublime_package_control_path "$st")" ]; then
+      print_with_color $GREEN 'Installing Package Control'
+      wget https://packagecontrol.io/Package%20Control.sublime-package -O "$(sublime_package_control_path "$st")".
+    fi
   fi
 }
 
@@ -105,6 +109,12 @@ else
   write_bash_profile
 fi
 
+############ WGET ############
+if ! [[ -f `which wget` ]]; then
+  print_with_color $YELLOW "Installing wget"
+  brew install wget
+fi
+
 ############ SUBLIME SETUP ############
 check_and_link_sublime 'Sublime Text'
 check_and_link_sublime 'Sublime Text 2'
@@ -122,6 +132,5 @@ case $yn in
 esac
 
 # TODO
-# install wget
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
