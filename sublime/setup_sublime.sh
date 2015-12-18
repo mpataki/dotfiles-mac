@@ -54,6 +54,8 @@ function install_ctags(){
   if ! [[ -d $ctags_path ]]; then
     git clone https://github.com/SublimeText/CTags "$ctags_path"
   fi
+
+  check_and_link_file sublime/CTags.sublime-settings "$(sublime_packages_path "$st")/CTags.sublime-settings"
 }
 
 function install_sublime_packages() {
