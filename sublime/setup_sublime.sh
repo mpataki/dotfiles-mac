@@ -48,14 +48,27 @@ function install_ctags(){
   ctags_path=$(sublime_packages_path "$st")/CTags
 
   if ! [ -e `brew --prefix`/bin/ctags ]; then
+    print_with_color $GREEN 'installing ctags'
     brew install ctags
   fi
 
   if ! [[ -d $ctags_path ]]; then
+    print_with_color $GREEN 'installing sublime ctags'
     git clone https://github.com/SublimeText/CTags "$ctags_path"
   fi
 
   check_and_link_file sublime/CTags.sublime-settings "$(sublime_packages_path "$st")/CTags.sublime-settings"
+}
+
+############## GIT GUTTER ##############
+function install_git_gutter(){
+  st=$1
+  git_gutter_path=$(sublime_packages_path "$st")/GitGutter
+
+  if ! [[ -e $git_gutter_path ]]; then
+    print_with_color $GREEN 'installing GitGutter'
+    git clone git://github.com/jisaacks/GitGutter.git "$git_gutter_path"
+  fi
 }
 
 function install_sublime_packages() {
@@ -63,6 +76,7 @@ function install_sublime_packages() {
   if [[ -d $(sublime_path "$st") ]]; then
     install_sublime_package_control "$st"
     install_ctags "$st"
+    install_git_gutter "$st"
   fi
 }
 
