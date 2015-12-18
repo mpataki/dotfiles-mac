@@ -42,6 +42,7 @@ function install_sublime_package_control() {
   fi
 }
 
+############## CTAGS ##############
 function install_ctags(){
   st=$1
   ctags_path=$(sublime_packages_path "$st")/CTags

@@ -1,16 +1,27 @@
 #!/usr/bin/env bash
 
-source lib/helpers.sh
+. lib/helpers.sh
 
-source install_config_files.sh
-source sublime/install_sublime_config.sh
+if ! [[ -e `which brew` ]]; then
+  print_with_color $YELLOW "Installing Homebrew"
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
 
-# install homebrew
-# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+if ! [[ `brew list | grep rbenv` ]]; then
+  print_with_color $YELLOW "Installing rbenv"
+  brew install rbenv
+fi
 
-# brew install git
-# brew install bash-completion
-# brew install z
-# brew install rbenv
+if ! [[ `brew list | grep z` ]]; then
+  print_with_color $YELLOW "Installing z"
+  brew install z
+fi
 
-# install_config_files
+if ! [[ `brew list | grep wget` ]]; then
+  print_with_color $YELLOW "Installing wget"
+  brew install wget
+fi
+
+. git/setup_git.sh
+. bash/setup_bash.sh
+. sublime/setup_sublime.sh
