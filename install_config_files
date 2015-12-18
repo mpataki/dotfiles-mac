@@ -98,6 +98,8 @@ function install_ctags(){
   if ! [[ -d $ctags_path ]]; then
     git clone https://github.com/SublimeText/CTags "$ctags_path"
   fi
+
+  #TODO link a ctags pref file for sublime
 }
 
 function install_sublime_packages() {
@@ -109,7 +111,11 @@ function install_sublime_packages() {
 }
 
 #################### GIT SETUP ####################
-# TODO install brew git
+if ! [[ -e `brew --prefix`/bin/git ]]; then
+  print_with_color $GREEN 'installing git'
+  brew install git
+fi
+
 check_and_link_file git/git_config $HOME/.gitconfig
 check_and_link_file git/git_ignore $HOME/.gitignore
 
@@ -159,3 +165,4 @@ esac
 # TODO
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
+print_with_color $GREEN done.
