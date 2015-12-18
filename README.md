@@ -9,3 +9,5 @@ Install the config files by running the [install_config_files](https://github.co
 ### TODO:
 [ ] link a ctags pref file for sublime
 [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
+[ ] setup subl
+[ ] move anything from `./setup_machine` to `./install_config_files` (and probably change the name)

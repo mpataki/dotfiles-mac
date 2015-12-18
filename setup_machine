@@ -9,5 +9,3 @@ brew install z
 brew install rbenv
 
 install_config_files
-
-#TODO setup subl
