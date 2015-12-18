@@ -98,8 +98,6 @@ function install_ctags(){
   if ! [[ -d $ctags_path ]]; then
     git clone https://github.com/SublimeText/CTags "$ctags_path"
   fi
-
-  #TODO link a ctags pref file for sublime
 }
 
 function install_sublime_packages() {
@@ -162,7 +160,4 @@ case $yn in
   * ) print_with_color $GREEN 'skipping...'
 esac
 
-# TODO
-# export GOPATH=$HOME/code/go
-# export PATH=$PATH:$GOPATH/bin
 print_with_color $GREEN done.
