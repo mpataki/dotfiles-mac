@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 
+source lib/helpers.sh
+
+source install_config_files.sh
+source sublime/install_sublime_config.sh
+
 # install homebrew
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-brew install git
-brew install bash-completion
-brew install z
-brew install rbenv
+# brew install git
+# brew install bash-completion
+# brew install z
+# brew install rbenv
 
-install_config_files
+# install_config_files

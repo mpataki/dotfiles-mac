@@ -1,48 +1,3 @@
-#!/usr/bin/env bash
-
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-BLUE='\033[0;34m'
-YELLOW='\033[0;33m'
-NC='\033[0m' # No Color
-
-function print_with_color() {
-  color=$1
-  string=$2
-  printf "${color}$string${NC}\n"
-}
-
-function link_file() {
-  source_file=$1
-  destination=$2
-
-  print_with_color $GREEN "linking $destination"
-  ln "$source_file" "$destination"
-}
-
-function check_and_link_file() {
-  source_file=$1
-  destination=$2
-  if [[ -e $destination ]]; then
-    print_with_color $YELLOW "$destination already exists. Do you want to override it? (yes/no)"
-    read yn
-    case $yn in
-      yes )
-        rm "$destination"
-        link_file "$source_file" "$destination"
-        ;;
-      * ) print_with_color $GREEN 'skipping...';;
-    esac
-  else
-    link_file "$source_file" "$destination"
-  fi
-}
-
-function write_bash_profile() {
-  print_with_color $GREEN "writing $HOME/.bash_profile"
-  echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
-  . $HOME/.bash_profile
-}
 
 function sublime_path() {
   local sublime=$1
@@ -108,42 +63,6 @@ function install_sublime_packages() {
   fi
 }
 
-#################### GIT SETUP ####################
-if ! [[ -e `brew --prefix`/bin/git ]]; then
-  print_with_color $GREEN 'installing git'
-  brew install git
-fi
-
-check_and_link_file git/git_config $HOME/.gitconfig
-check_and_link_file git/git_ignore $HOME/.gitignore
-
-if ! [ -e `brew --prefix`/etc/bash_completion ]; then
-  print_with_color $GREEN "Git bash_completion not installed. Do you want to install it? (yes/no)"
-  read yn
-  case $yn in
-    yes ) brew install git bash-completion;;
-    * ) print_with_color $GREEN 'skipping...';;
-  esac
-fi
-
-################## BASH PROFILE ##################
-if [ -e $HOME/.bash_profile ]; then
-  print_with_color $YELLOW "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)"
-  read yn
-  case $yn in
-    yes ) write_bash_profile;;
-    * ) print_with_color $GREEN 'skipping...';;
-  esac
-else
-  write_bash_profile
-fi
-
-############ WGET ############
-if ! [[ -e `which wget` ]]; then
-  print_with_color $YELLOW "Installing wget"
-  brew install wget
-fi
-
 ############ SUBLIME SETUP ############
 check_and_link_sublime 'Sublime Text'
 check_and_link_sublime 'Sublime Text 2'
@@ -159,5 +78,3 @@ case $yn in
     ;;
   * ) print_with_color $GREEN 'skipping...'
 esac
-
-print_with_color $GREEN done.
