@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+function print_with_color() {
+  color=$1
+  string=$2
+  printf "${color}$string${NC}\n"
+}
+
 function link_file() {
   source_file=$1
   destination=$2
 
-  echo "linking $destination"
+  print_with_color $GREEN "linking $destination"
   ln "$source_file" "$destination"
 }
 
@@ -12,13 +24,14 @@ function check_and_link_file() {
   source_file=$1
   destination=$2
   if [[ -f $destination ]]; then
-    read -p "$destination already exists. Do you want to override it? (yes/no)" yn
+    print_with_color $YELLOW "$destination already exists. Do you want to override it? (yes/no)"
+    read yn
     case $yn in
       yes )
         rm "$destination"
         link_file "$source_file" "$destination"
         ;;
-      * ) echo 'skipping...';;
+      * ) print_with_color $GREEN 'skipping...';;
     esac
   else
     link_file "$source_file" "$destination"
@@ -26,7 +39,7 @@ function check_and_link_file() {
 }
 
 function write_bash_profile() {
-  echo "writing $HOME/.bash_profile"
+  print_with_color $GREEN "writing $HOME/.bash_profile"
   echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
   . $HOME/.bash_profile
 }
@@ -62,7 +75,7 @@ function check_and_link_sublime() {
 function install_sublime_packages() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
-    echo 'Installing Package Control'
+    print_with_color $GREEN 'Installing Package Control'
     wget https://packagecontrol.io/Package%20Control.sublime-package -O "$(sublime_package_control_path "$st")".
   fi
 }
@@ -72,19 +85,21 @@ check_and_link_file git/git_config $HOME/.gitconfig
 check_and_link_file git/git_ignore $HOME/.gitignore
 
 if ! [ -f `brew --prefix`/etc/bash_completion ]; then
-  read -p "Git bash_completion not installed. Do you want to install it? (yes/no)" yn
+  print_with_color $GREEN "Git bash_completion not installed. Do you want to install it? (yes/no)"
+  read yn
   case $yn in
     yes ) brew install git bash-completion;;
-    * ) echo 'skipping...';;
+    * ) print_with_color $GREEN 'skipping...';;
   esac
 fi
 
 ################## BASH PROFILE ##################
 if [ -f $HOME/.bash_profile ]; then
-  read -p "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)" yn
+  print_with_color $YELLOW "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)"
+  read yn
   case $yn in
     yes ) write_bash_profile;;
-    * ) echo 'skipping...';;
+    * ) print_with_color $GREEN 'skipping...';;
   esac
 else
   write_bash_profile
@@ -95,14 +110,15 @@ check_and_link_sublime 'Sublime Text'
 check_and_link_sublime 'Sublime Text 2'
 check_and_link_sublime 'Sublime Text 3'
 
-read -p 'Do you want to install Sublime Packages? (yes/no)' yn
+print_with_color $YELLOW 'Do you want to install Sublime Packages? (yes/no)'
+read yn
 case $yn in
   yes )
     install_sublime_packages 'Sublime Text'
     install_sublime_packages 'Sublime Text 2'
     install_sublime_packages 'Sublime Text 3'
     ;;
-  * ) echo 'skipping...'
+  * ) print_with_color $GREEN 'skipping...'
 esac
 
 # TODO
