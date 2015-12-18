@@ -46,11 +46,24 @@ function sublime_key_binding_path() {
   echo "$(sublime_path "$sublime")/Packages/User/Default (OSX).sublime-keymap"
 }
 
+function sublime_package_control_path() {
+ local sublime=$1
+  echo "$(sublime_path "$sublime")/Installed Packages/Package Control.sublime-package"
+}
+
 function check_and_link_sublime() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
     check_and_link_file 'sublime/Preferences.sublime-settings' "$(sublime_pref_path "$st")"
     check_and_link_file 'sublime/key_bindings.json' "$(sublime_key_binding_path "$st")"
+  fi
+}
+
+function install_sublime_packages() {
+  local st=$1
+  if [[ -d $(sublime_path "$st") ]]; then
+    echo 'Installing Package Control'
+    wget https://packagecontrol.io/Package%20Control.sublime-package -O "$(sublime_package_control_path "$st")".
   fi
 }
 
@@ -77,11 +90,22 @@ else
   write_bash_profile
 fi
 
-################# SUBLIME SETUP #################
+############ SUBLIME SETUP ############
 check_and_link_sublime 'Sublime Text'
 check_and_link_sublime 'Sublime Text 2'
 check_and_link_sublime 'Sublime Text 3'
 
+read -p 'Do you want to install Sublime Packages? (yes/no)' yn
+case $yn in
+  yes )
+    install_sublime_packages 'Sublime Text'
+    install_sublime_packages 'Sublime Text 2'
+    install_sublime_packages 'Sublime Text 3'
+    ;;
+  * ) echo 'skipping...'
+esac
+
 # TODO
+# install wget
 # export GOPATH=$HOME/code/go
 # export PATH=$PATH:$GOPATH/bin
