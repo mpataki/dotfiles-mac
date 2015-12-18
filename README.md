@@ -11,3 +11,5 @@ Install the config files by running the [install_config_files](https://github.co
 - [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
 - [ ] setup subl
 - [ ] move anything from `./setup_machine` to `./install_config_files` (and probably change the name)
+- [ ] install item
+- [ ] link item prefs

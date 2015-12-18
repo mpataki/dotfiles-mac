@@ -71,12 +71,24 @@ function install_git_gutter(){
   fi
 }
 
+############## GITHUB TOOLS ##############
+function install_github_tools(){
+  st=$1
+  github_tools_path=$(sublime_packages_path "$st")/sublime-text-2-github-tools
+
+  if ! [[ -e $github_tools_path ]]; then
+    print_with_color $GREEN 'installing Github Tools'
+    git clone https://github.com/temochka/sublime-text-2-github-tools.git "$github_tools_path"
+  fi
+}
+
 function install_sublime_packages() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
     install_sublime_package_control "$st"
     install_ctags "$st"
     install_git_gutter "$st"
+    install_github_tools "$st"
   fi
 }
 
