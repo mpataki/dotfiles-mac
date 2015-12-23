@@ -12,7 +12,7 @@ function setup_atom(){
     print_with_color $YELLOW "You may want to try to update when you launch Atom."
   fi
 
-  check_and_copy_file 'atom/atom_config' "$HOME/.atom"
+  check_and_link_file "`pwd`/atom/atom_config" "$HOME/.atom"
 }
 
 print_with_color $YELLOW 'Do you want to install Atom? (yes/no)'

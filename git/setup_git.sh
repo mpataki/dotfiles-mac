@@ -5,5 +5,5 @@ if ! [[ -e `brew --prefix`/bin/git ]]; then
   brew install git
 fi
 
-check_and_link_file git/git_config $HOME/.gitconfig
-check_and_link_file git/git_ignore $HOME/.gitignore
+check_and_link_file `pwd`/git/git_config $HOME/.gitconfig
+check_and_link_file `pwd`/git/git_ignore $HOME/.gitignore

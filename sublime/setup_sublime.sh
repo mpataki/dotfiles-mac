@@ -27,8 +27,8 @@ function sublime_packages_path() {
 function check_and_link_sublime() {
   local st=$1
   if [[ -d $(sublime_path "$st") ]]; then
-    check_and_link_file 'sublime/Preferences.sublime-settings' "$(sublime_pref_path "$st")"
-    check_and_link_file 'sublime/key_bindings.json' "$(sublime_key_binding_path "$st")"
+    check_and_link_file "`pwd`/sublime/Preferences.sublime-settings" "$(sublime_pref_path "$st")"
+    check_and_link_file "`pwd`/sublime/key_bindings.json" "$(sublime_key_binding_path "$st")"
   fi
 }
 
@@ -57,7 +57,7 @@ function install_ctags(){
     git clone https://github.com/SublimeText/CTags "$ctags_path"
   fi
 
-  check_and_link_file sublime/CTags.sublime-settings "$(sublime_packages_path "$st")/CTags.sublime-settings"
+  check_and_link_file "`pwd`/sublime/CTags.sublime-settings" "$(sublime_packages_path "$st")/CTags.sublime-settings"
 }
 
 ############## GIT GUTTER ##############
