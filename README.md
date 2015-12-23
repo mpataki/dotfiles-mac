@@ -6,7 +6,7 @@ If you're going to use these, be sure to change the name and email in the [git c
 
 Install the config files by running the [setup_machine](https://github.com/mpataki/config_files/blob/master/setup_machine) script.
 
-### ToDo:
+### TODO:
 - [x] link a ctags pref file for sublime
 - [x] atom
 - [x] install iterm
