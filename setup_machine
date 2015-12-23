@@ -25,3 +25,4 @@ fi
 . git/setup_git.sh
 . bash/setup_bash.sh
 . sublime/setup_sublime.sh
+. atom/setup_atom.sh

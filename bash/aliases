@@ -1,4 +1,4 @@
-alias e='subl .' # TODO install the subl command in the install script
+alias e='atom .'
 
 # git
 alias g='git'

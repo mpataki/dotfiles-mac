@@ -1,0 +1,15 @@
+"*":
+  "exception-reporting":
+    userId: "8c46aad8-9f67-d742-b636-4a6cb4891d57"
+  welcome:
+    showOnStartup: false
+  core:
+    projectHome: "/Users/mat/code"
+    openEmptyEditorOnStart: false
+    followSymlinks: false
+  editor:
+    invisibles: {}
+    tabType: "soft"
+    fontSize: 12
+  whitespace: {}
+  "one-dark-ui": {}

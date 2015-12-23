@@ -15,18 +15,24 @@ function link_file() {
   destination=$2
 
   print_with_color $GREEN "linking $destination"
-  ln "$source_file" "$destination"
+
+  if [[ -d $source_file ]]; then
+    ln -s "$source_file" "$destination"
+  else
+    ln "$source_file" "$destination"
+  fi
+
 }
 
 function check_and_link_file() {
   source_file=$1
   destination=$2
-  if [[ -e $destination ]]; then
+  if [[ -e $destination ]] || [[ -L $destination ]]; then
     print_with_color $YELLOW "$destination already exists. Do you want to override it? (yes/no)"
     read yn
     case $yn in
       yes )
-        rm "$destination"
+        rm -r "$destination"
         link_file "$source_file" "$destination"
         ;;
       * ) print_with_color $GREEN 'skipping...';;
