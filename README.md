@@ -8,8 +8,8 @@ Install the config files by running the [setup_machine](https://github.com/mpata
 
 ### ToDo:
 - [x] link a ctags pref file for sublime
-- [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
-- [ ] setup subl
+- [x] atom
 - [ ] install iterm
 - [ ] link iterm prefs
-- [ ] atom?
+- [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
+- [ ] setup subl
