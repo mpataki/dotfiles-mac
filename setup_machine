@@ -22,7 +22,11 @@ if ! [[ `brew list | grep wget` ]]; then
   brew install wget
 fi
 
+print_with_color $GREEN 'Updating Homebrew'
+brew update
+
 . git/setup_git.sh
 . bash/setup_bash.sh
 . sublime/setup_sublime.sh
 . atom/setup_atom.sh
+. iterm/setup_iterm.sh
