@@ -9,8 +9,8 @@ Install the config files by running the [setup_machine](https://github.com/mpata
 ### ToDo:
 - [x] link a ctags pref file for sublime
 - [x] atom
-- [ ] install iterm
+- [x] install iterm
 - [ ] link iterm prefs
 - [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
-- [ ] setup subl
+- [x] setup subl
 - [ ] fix git bash completion
