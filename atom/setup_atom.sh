@@ -1,6 +1,6 @@
 
 function setup_atom(){
-  if ! [[ -e /Applications/Atom.app ]]; then
+  if ! [[ -e /Applications/Atom.app ]] && ! [[ -e $HOME/Applications/Atom.app ]]; then
     print_with_color $GREEN 'Atom is not installed. Downloading...'
     brew install Caskroom/cask/atom
   fi
