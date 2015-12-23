@@ -17,4 +17,4 @@ else
   write_bash_profile
 fi
 
-print_with_color $GREEN done.
+print_with_color $GREEN 'done.'

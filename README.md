@@ -13,3 +13,4 @@ Install the config files by running the [setup_machine](https://github.com/mpata
 - [ ] link iterm prefs
 - [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
 - [ ] setup subl
+- [ ] fix git bash completion
