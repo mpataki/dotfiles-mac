@@ -5,6 +5,11 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $SCRIPT_DIR/colour_config
 . $SCRIPT_DIR/aliases
 
+# load git's autocompletion script
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
+
 # z command
 . `brew --prefix`/etc/profile.d/z.sh
 
