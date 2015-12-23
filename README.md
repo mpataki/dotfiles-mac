@@ -14,3 +14,7 @@ Install the config files by running the [setup_machine](https://github.com/mpata
 - [ ] setup go (something like: `export GOPATH=$HOME/code/go` and `export PATH=$PATH:$GOPATH/bin`
 - [x] setup subl
 - [ ] fix git bash completion
+- [x] install sublime
+- [ ] install chrome
+- [ ] install alfred
+- [ ] install spectacle
