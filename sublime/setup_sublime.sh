@@ -92,18 +92,34 @@ function install_sublime_packages() {
   fi
 }
 
-############ SUBLIME SETUP ############
-check_and_link_sublime 'Sublime Text'
-check_and_link_sublime 'Sublime Text 2'
-check_and_link_sublime 'Sublime Text 3'
+function setup_sublime(){
+  if ! [[ -e "$(sublime_path 'Sublime Text')" ]] && ! [[ -e "$(sublime_path 'Sublime Text 2')" ]] && ! [[ -e "$(sublime_path 'Sublime Text 3')" ]]; then
+    print_with_color $GREEN 'Sublime Text is not installed. Downloading...'
+    brew install caskroom/cask/brew-cask
+    brew tap caskroom/versions
+    brew cask install sublime-text3
+  fi
 
-print_with_color $YELLOW 'Do you want to install Sublime Packages? (yes/no)'
+  check_and_link_sublime 'Sublime Text'
+  check_and_link_sublime 'Sublime Text 2'
+  check_and_link_sublime 'Sublime Text 3'
+
+  print_with_color $YELLOW 'Do you want to install Sublime Packages? (yes/no)'
+  read yn
+  case $yn in
+    yes )
+      install_sublime_packages 'Sublime Text'
+      install_sublime_packages 'Sublime Text 2'
+      install_sublime_packages 'Sublime Text 3'
+      ;;
+    * ) print_with_color $GREEN 'skipping...'
+  esac
+}
+
+############ SUBLIME SETUP ############
+print_with_color $YELLOW 'Do you want to install Sublime? (yes/no)'
 read yn
 case $yn in
-  yes )
-    install_sublime_packages 'Sublime Text'
-    install_sublime_packages 'Sublime Text 2'
-    install_sublime_packages 'Sublime Text 3'
-    ;;
-  * ) print_with_color $GREEN 'skipping...'
+  yes ) setup_sublime;;
+  * ) print_with_color $GREEN 'skipping...';;
 esac
