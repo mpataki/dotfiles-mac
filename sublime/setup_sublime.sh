@@ -104,7 +104,7 @@ function setup_sublime(){
   check_and_link_sublime 'Sublime Text 2'
   check_and_link_sublime 'Sublime Text 3'
 
-  print_with_color $YELLOW 'Do you want to install Sublime Packages? (yes/no)'
+  print_with_color $YELLOW 'Setup Sublime Packages? (yes/no)'
   read yn
   case $yn in
     yes )
@@ -117,7 +117,7 @@ function setup_sublime(){
 }
 
 ############ SUBLIME SETUP ############
-print_with_color $YELLOW 'Do you want to install Sublime? (yes/no)'
+print_with_color $YELLOW 'Setup Sublime? (yes/no)'
 read yn
 case $yn in
   yes ) setup_sublime;;

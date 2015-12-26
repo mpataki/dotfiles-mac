@@ -8,7 +8,7 @@ function setup_atom(){
   check_and_link_file "`pwd`/atom/atom_config" "$HOME/.atom"
 }
 
-print_with_color $YELLOW 'Do you want to install Atom? (yes/no)'
+print_with_color $YELLOW 'Setup Atom? (yes/no)'
 read yn
 case $yn in
   yes ) setup_atom;;
