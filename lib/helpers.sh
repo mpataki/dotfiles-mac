@@ -1,13 +1,14 @@
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-BLUE='\033[0;34m'
-YELLOW='\033[0;33m'
-NC='\033[0m' # No Color
+RED="\e[31m"
+GREEN="\e[32m"
+BLUE="\e[34m"
+YELLOW="\e[33m"
+WHITE="\e[37m"
+NONE="\e[39m"
 
 function print_with_color() {
   color=$1
   string=$2
-  printf "${color}$string${NC}\n"
+  echo -e "$color$string$NONE"
 }
 
 function link_file() {

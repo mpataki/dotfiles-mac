@@ -55,3 +55,5 @@ if ! [[ -e '/Applications/Spectacle.app' ]] && ! [[ -e "$HOME/Applications/Spect
   print_with_color $GREEN 'Spectacle is not installed. Downloading...'
   brew cask install spectacle
 fi
+
+. $HOME/.bash_profile
