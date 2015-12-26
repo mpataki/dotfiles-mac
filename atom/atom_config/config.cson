@@ -14,3 +14,5 @@
     fontSize: 12
   whitespace: {}
   "one-dark-ui": {}
+  "gist-it":
+    newGistsDefaultToPrivate: true
