@@ -25,3 +25,9 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+
+'atom-text-editor':
+  'ctrl-left': 'editor:move-to-previous-subword-boundary'
+  'ctrl-right': 'editor:move-to-next-subword-boundary'
+  'ctrl-shift-left': 'editor:select-to-previous-subword-boundary'
+  'ctrl-shift-right': 'editor:select-to-next-subword-boundary'
