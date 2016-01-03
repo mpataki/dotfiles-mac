@@ -7,6 +7,8 @@ function setup_git() {
 
   check_and_link_file `pwd`/git/git_config $HOME/.gitconfig
   check_and_link_file `pwd`/git/git_ignore $HOME/.gitignore
+
+  __git_complete 'g co' _git_checkout
 }
 
 print_with_color $YELLOW 'Setup Git? (yes/no)'
