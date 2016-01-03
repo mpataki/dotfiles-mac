@@ -2524,13 +2524,13 @@
 	<key>NSTableView Sort Ordering KeyBingingTable</key>
 	<array/>
 	<key>NSWindow Frame Preferences</key>
-	<string>230 155 924 485 0 0 1440 900 </string>
+	<string>231 155 924 485 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 413 570 451 0 0 1440 877 </string>
+	<string>4 435 570 451 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>4 431 570 451 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>204 45 570 451 0 0 1440 900 </string>
+	<string>4 0 718 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>246 449 570 451 0 0 1440 900 </string>
 	<key>New Bookmarks</key>
@@ -3278,7 +3278,7 @@
 	<key>NoSyncTimeOfLastPromo</key>
 	<real>458331997.87808102</real>
 	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>472530170.36805201</real>
+	<real>472629012.79551399</real>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -3343,7 +3343,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2015-12-24T02:28:56Z</date>
+	<date>2016-01-03T02:30:42Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
