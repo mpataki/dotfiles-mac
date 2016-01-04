@@ -1,1 +1,3 @@
 atom/atom_config/gist-it.token
+atom/atom_config/blob-store/*
+atom/atom_config/storage/*
