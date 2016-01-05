@@ -20,4 +20,4 @@ Install the config files by running the [setup_machine](https://github.com/mpata
 - [x] install spectacle
 - [x] install dropbox
 - [x] install 1Password
-- [ ] fix colored output
+- [x] fix colored output

@@ -8,7 +8,7 @@ NONE="\e[39m"
 function print_with_color() {
   color=$1
   string=$2
-  echo -e "$color$string$NONE"
+  printf "$color$string$NONE\n"
 }
 
 function link_file() {
