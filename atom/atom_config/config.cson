@@ -16,3 +16,4 @@
   "one-dark-ui": {}
   "gist-it":
     newGistsDefaultToPrivate: true
+  tabs: {}
