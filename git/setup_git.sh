@@ -8,7 +8,7 @@ function setup_git() {
   check_and_link_file `pwd`/git/git_config $HOME/.gitconfig
   check_and_link_file `pwd`/git/git_ignore $HOME/.gitignore
 
-  if ! [[ brew list | grep bash-completion ]]; then
+  if ! [[ `brew list | grep bash-completion` ]]; then
     print_with_color $GREEN 'installing git bash-completion'
     brew install bash-completion
   fi

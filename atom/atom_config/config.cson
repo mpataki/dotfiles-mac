@@ -11,9 +11,11 @@
   editor:
     invisibles: {}
     tabType: "soft"
-    fontSize: 12
+    fontSize: 13
   whitespace: {}
   "one-dark-ui": {}
   "gist-it":
     newGistsDefaultToPrivate: true
   tabs: {}
+  "tree-view":
+    showOnRightSide: false
