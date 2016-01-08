@@ -8,6 +8,9 @@
     openEmptyEditorOnStart: false
     followSymlinks: false
     destroyEmptyPanes: false
+    disabledPackages: [
+      "wrap-guide"
+    ]
   editor:
     invisibles: {}
     tabType: "soft"
