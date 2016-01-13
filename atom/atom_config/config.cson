@@ -10,7 +10,6 @@
     destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
-      "gist-it"
     ]
   editor:
     invisibles: {}
