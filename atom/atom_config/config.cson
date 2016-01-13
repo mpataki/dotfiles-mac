@@ -22,5 +22,4 @@
   tabs: {}
   "tree-view":
     showOnRightSide: false
-  gist:
-    tokenFile: "/Users/mat/.config_files/atom/atom_config/gist-it.token"
+  gist: {}
