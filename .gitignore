@@ -2,3 +2,4 @@ atom/atom_config/blob-store/*
 atom/atom_config/storage/*
 **/.cache.json
 **/gist.token
+atom/atom_config/.apm/*
