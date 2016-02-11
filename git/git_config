@@ -20,7 +20,7 @@
   ps = push
   s = status --short
 [user]
-  name = mat
+  name = Mat Pataki
   email = matpataki@gmail.com
 [credential]
   helper = osxkeychain
