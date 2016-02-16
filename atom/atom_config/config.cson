@@ -1,25 +1,26 @@
 "*":
-  "exception-reporting":
-    userId: "8c46aad8-9f67-d742-b636-4a6cb4891d57"
-  welcome:
-    showOnStartup: false
   core:
-    projectHome: "/Users/mat/code"
-    openEmptyEditorOnStart: false
-    followSymlinks: false
     destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
     ]
+    followSymlinks: false
+    openEmptyEditorOnStart: false
+    projectHome: "/Users/mat/code"
   editor:
+    fontSize: 13
     invisibles: {}
     tabType: "soft"
-    fontSize: 13
-  whitespace: {}
-  "one-dark-ui": {}
+  "exception-reporting":
+    userId: "8c46aad8-9f67-d742-b636-4a6cb4891d57"
+  gist: {}
   "gist-it":
     newGistsDefaultToPrivate: true
+  linter: {}
+  "one-dark-ui": {}
   tabs: {}
   "tree-view":
     showOnRightSide: false
-  gist: {}
+  welcome:
+    showOnStartup: false
+  whitespace: {}
