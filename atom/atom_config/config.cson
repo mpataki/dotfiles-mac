@@ -5,6 +5,9 @@
       "wrap-guide"
     ]
     followSymlinks: false
+    ignoredNames: [
+      "*.sql"
+    ]
     openEmptyEditorOnStart: false
     projectHome: "/Users/mat/code"
   editor:
@@ -17,7 +20,9 @@
   "gist-it":
     newGistsDefaultToPrivate: true
   linter: {}
+  "omnisharp-atom": {}
   "one-dark-ui": {}
+  "quantum-shell": {}
   tabs: {}
   "tree-view":
     showOnRightSide: false

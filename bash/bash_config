@@ -28,10 +28,6 @@ if [ -d /Users/mat/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-## for bingo
-export REDIS_URL=redis://localhost:6379/0
-export MEMCACHED=localhost:11211
-
 # omnisharp dependency
 source dnvm.sh
 

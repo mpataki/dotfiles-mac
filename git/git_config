@@ -20,6 +20,7 @@
   ps = push
   s = status --short
   merged = log --date-order --tags --simplify-by-decoration --pretty=format:\"%Cblue%h %Cgreen%<|(20)[%cr]%Creset %C(auto)%<|(41)%d %s\"
+  sb = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
 [user]
   name = Mat Pataki
   email = matpataki@gmail.com
