@@ -5,7 +5,13 @@ function setup_atom(){
     brew cask install atom
   fi
 
-  check_and_link_file "`pwd`/atom/atom_config" "$HOME/.atom"
+  if ! [[ -e $HOME/.atom ]]; then
+    mkdir $HOME/.atom
+  fi
+
+  check_and_link_file "`pwd`/atom/atom_config/config.cson" "$HOME"/.atom/
+  check_and_link_file "`pwd`/atom/atom_config/init.coffee" "$HOME"/.atom/
+  check_and_link_file "`pwd`/atom/atom_config/keymap.cson" "$HOME"/.atom/
 }
 
 print_with_color $YELLOW 'Setup Atom? (yes/no)'

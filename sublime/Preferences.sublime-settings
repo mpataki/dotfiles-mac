@@ -16,6 +16,10 @@
 		"_site"
 	],
 	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"save_on_focus_lost": true,
 	"scroll_past_end": true,
 	"tab_size": 2,

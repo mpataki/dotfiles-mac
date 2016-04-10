@@ -13,6 +13,7 @@
   editor:
     fontSize: 13
     invisibles: {}
+    showLineNumbers: false
     tabType: "soft"
   "exception-reporting":
     userId: "8c46aad8-9f67-d742-b636-4a6cb4891d57"
