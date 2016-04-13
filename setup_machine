@@ -22,6 +22,11 @@ if ! [[ `brew list | grep wget` ]]; then
   brew install wget
 fi
 
+if ! [[ `brew list | grep ag` ]]; then
+  print_with_color $YELLOW "Installing ag"
+  brew install ag
+fi
+
 print_with_color $GREEN 'Updating Homebrew'
 brew update
 
