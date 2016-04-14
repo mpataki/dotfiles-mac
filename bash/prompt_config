@@ -31,9 +31,9 @@ function _print_prompt {
 function exitstatus {
   EXITSTATUS="$?"
 
-  PS1="\n$GREEN\w$NONE $(_print_prompt) \n♦ "
+  PS1="\n$BLUE\w$NONE $(_print_prompt) \n⫸  "
 
-  echo -ne "\033]0;${PWD##*/}\007"
+  # echo -ne "\033]0;${PWD##*/}\007"
 }
 
 PROMPT_COMMAND=exitstatus
