@@ -38,3 +38,15 @@ function check_and_link_file() {
     link_file "$source_file" "$destination"
   fi
 }
+
+function download_app() {
+  app_file_name=$1
+  brew_app_name=$2
+
+  if [[ ! `ls /Applications/ | grep "$app_file_name"` ]] && [[ ! -e `ls $HOME/Applications/ | grep "$app_file_name"` ]]; then
+    print_with_color $GREEN "$app_file_name is not installed. Downloading..."
+    brew cask install $brew_app_name
+  else
+    print_with_color $YELLOW "$app_file_name already installed"
+  fi
+}

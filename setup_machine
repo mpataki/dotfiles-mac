@@ -37,29 +37,10 @@ brew update
 . atom/setup_atom.sh
 . iterm/setup_iterm.sh
 
-if ! [[ -e '/Applications/Google Chrome.app' ]] && ! [[ -e "$HOME/Applications/Google Chrome.app" ]]; then
-  print_with_color $GREEN 'Chrome is not installed. Downloading...'
-  brew cask install google-chrome
-fi
-
-if ! [[ -e '/Applications/Alfred 2.app' ]] && ! [[ -e "$HOME/Applications/Alfred 2.app" ]]; then
-  print_with_color $GREEN 'Alfred is not installed. Downloading...'
-  brew cask install alfred
-fi
-
-if ! [[ -e '/Applications/Dropbox.app' ]] && ! [[ -e "$HOME/Applications/Dropbox.app" ]]; then
-  print_with_color $GREEN 'Dropbox is not installed. Downloading...'
-  brew cask install dropbox
-fi
-
-if ! [[ -e '/Applications/1Password 5.app' ]] && ! [[ -e "$HOME/Applications/1Password 5.app" ]]; then
-  print_with_color $GREEN '1Password is not installed. Downloading...'
-  brew cask install 1password
-fi
-
-if ! [[ -e '/Applications/Spectacle.app' ]] && ! [[ -e "$HOME/Applications/Spectacle.app" ]]; then
-  print_with_color $GREEN 'Spectacle is not installed. Downloading...'
-  brew cask install spectacle
-fi
+download_app 'Google Chrome' 'google-chrome'
+download_app 'Alfred' 'alfred'
+download_app 'Dropbox' 'dropbox'
+download_app '1Password' '1password'
+download_app 'Spectacle' 'spectacle'
 
 . $HOME/.bash_profile
