@@ -2535,7 +2535,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>412 381 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>4 410 570 452 0 0 1440 877 </string>
+	<string>870 448 570 452 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>4 449 570 451 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2643,12 +2643,16 @@
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.57628089189529419</real>
+				<real>0.99865812063217163</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.48589074611663818</real>
+				<real>0.5945504903793335</real>
 				<key>Red Component</key>
-				<real>0.41643223166465759</real>
+				<real>0.32230305671691895</real>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
@@ -4093,7 +4097,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mat/.config_files/iterm/</string>
+	<string>/Users/mat/config_files/iterm/</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -4113,7 +4117,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-09T21:28:17Z</date>
+	<date>2016-04-23T02:04:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -4164,5 +4168,9 @@
 	<false/>
 	<key>iTerm Version</key>
 	<string>2.9.20160313</string>
+	<key>kCPKSelectionViewPreferredModeKey</key>
+	<integer>0</integer>
+	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
+	<false/>
 </dict>
 </plist>
