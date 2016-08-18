@@ -33,3 +33,8 @@ source dnvm.sh
 
 # VS Code
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
+
+# hub (Github git extension)
+if [[ `brew list | grep hub` ]]; then
+  eval "$(hub alias -s)"
+fi

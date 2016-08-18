@@ -12,6 +12,11 @@ function setup_git() {
     print_with_color $GREEN 'installing git bash-completion'
     brew install bash-completion
   fi
+
+  if ! [[ `brew list | grep hub` ]]; then
+    print_with_color $GREEN 'installing hub'
+    brew install hub
+  fi
 }
 
 print_with_color $YELLOW 'Setup Git? (yes/no)'
