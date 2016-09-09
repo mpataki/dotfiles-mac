@@ -4,6 +4,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 . $SCRIPT_DIR/prompt_config
 . $SCRIPT_DIR/color_config
 . $SCRIPT_DIR/aliases
+. $SCRIPT_DIR/environment
 
 # load git's autocompletion script
 if [ -f `brew --prefix`/etc/bash_completion ]; then
