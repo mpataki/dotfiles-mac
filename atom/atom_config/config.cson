@@ -10,6 +10,7 @@
     ]
     openEmptyEditorOnStart: false
     projectHome: "/Users/mat/code"
+    telemetryConsent: "limited"
   editor:
     fontSize: 13
     invisibles: {}
