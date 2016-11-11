@@ -1,5 +1,6 @@
 "*":
   core:
+    useCustomTitleBar: true
     destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
