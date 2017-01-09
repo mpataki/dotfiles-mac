@@ -22,6 +22,11 @@ if ! [[ `brew list | grep ag` ]]; then
   brew install ag
 fi
 
+if ! [[ `brew list | grep pass` ]]; then
+  print_with_color $YELLOW "Installing pass"
+  brew install pass
+fi`
+
 print_with_color $GREEN 'Updating Homebrew'
 brew update
 
