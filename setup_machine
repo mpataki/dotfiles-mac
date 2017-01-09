@@ -12,11 +12,6 @@ if ! [[ `brew list | grep rbenv` ]]; then
   brew install rbenv
 fi
 
-if ! [[ `brew list | grep z` ]]; then
-  print_with_color $YELLOW "Installing z"
-  brew install z
-fi
-
 if ! [[ `brew list | grep wget` ]]; then
   print_with_color $YELLOW "Installing wget"
   brew install wget
