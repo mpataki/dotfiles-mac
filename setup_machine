@@ -7,28 +7,15 @@ if ! [[ -e `which brew` ]]; then
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-if ! [[ `brew list | grep rbenv` ]]; then
-  print_with_color $YELLOW "Installing rbenv"
-  brew install rbenv
-fi
-
-if ! [[ `brew list | grep wget` ]]; then
-  print_with_color $YELLOW "Installing wget"
-  brew install wget
-fi
-
-if ! [[ `brew list | grep ag` ]]; then
-  print_with_color $YELLOW "Installing ag"
-  brew install ag
-fi
-
-if ! [[ `brew list | grep pass` ]]; then
-  print_with_color $YELLOW "Installing pass"
-  brew install pass
-fi`
-
 print_with_color $GREEN 'Updating Homebrew'
 brew update
+
+homebrew_install 'rbenv'
+homebrew_install 'wget'
+homebrew_install 'ag'
+homebrew_install 'pass'
+homebrew_install 'gpg-agent'
+homebrew_install 'pinentry-mac'
 
 . bash/setup_bash.sh
 . git/setup_git.sh
@@ -36,6 +23,7 @@ brew update
 . sublime/setup_sublime.sh
 . atom/setup_atom.sh
 . iterm/setup_iterm.sh
+. gnupg/setup_gnupg.sh
 
 download_app 'Google Chrome' 'google-chrome'
 download_app 'Alfred' 'alfred'

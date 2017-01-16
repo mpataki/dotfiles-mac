@@ -50,3 +50,13 @@ function download_app() {
     print_with_color $YELLOW "$app_file_name already installed"
   fi
 }
+
+function homebrew_install() {
+  app_name=$1
+  
+  if ! [[ `brew list | grep $app_name` ]]; then
+    print_with_color $YELLOW "Installing $app_name"
+    brew install $app_name
+  fi
+}
+

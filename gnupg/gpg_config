@@ -1,0 +1,20 @@
+use-agent
+
+# When verifying a signature made from a subkey, ensure that the cross
+# certification "back signature" on the subkey is present and valid.
+# This protects against a subtle attack against subkeys that can sign.
+# Defaults to --no-require-cross-certification.  However for new
+# installations it should be enabled.
+
+require-cross-certification
+
+# Most users just set the name and type of their preferred keyserver.
+# Note that most servers (with the notable exception of
+# ldap://keyserver.pgp.com) synchronize changes with each other.  Note
+# also that a single server name may actually point to multiple
+# servers via DNS round-robin.  hkp://keys.gnupg.net is an example of
+# such a "server", which spreads the load over a number of physical
+# servers.  To see the IP address of the server actually used, you may use
+# the "--keyserver-options debug".
+
+keyserver hkp://keys.gnupg.net
