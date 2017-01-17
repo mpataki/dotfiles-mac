@@ -1,4 +1,4 @@
-alias e='atom .'
+alias e='vim .'
 
 # git
 alias g='git'
@@ -17,5 +17,3 @@ alias be='bundle exec'
 # system
 alias ls='ls -G' # turn on colors
 
-# bingo
-alias dbr='be rake db:data:reload && RAILS_ENV=test be rake db:data:reload'
