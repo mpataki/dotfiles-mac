@@ -1,4 +1,4 @@
-alias e='vim .'
+alias e='vim'
 
 # git
 alias g='git'
