@@ -15,6 +15,8 @@ homebrew_install 'wget'
 homebrew_install 'ag'
 homebrew_install 'pass'
 homebrew_install 'gpg-agent'
+brew install Caskroom/cask/gpgtools
+homebrew_install 'gpgtools'
 homebrew_install 'pinentry-mac'
 
 . bash/setup_bash.sh
