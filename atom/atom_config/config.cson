@@ -1,6 +1,5 @@
 "*":
   core:
-    useCustomTitleBar: true
     destroyEmptyPanes: false
     disabledPackages: [
       "wrap-guide"
@@ -12,8 +11,8 @@
     openEmptyEditorOnStart: false
     projectHome: "/Users/mat/code"
     telemetryConsent: "limited"
+    useCustomTitleBar: true
   editor:
-    fontSize: 13
     invisibles: {}
     scrollPastEnd: true
     softWrap: true
