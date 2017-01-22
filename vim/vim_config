@@ -5,3 +5,5 @@ set wildmode=list:longest
 let g:netrw_liststyle=3
 set splitbelow
 set splitright
+set swapfile
+set dir=/tmp
