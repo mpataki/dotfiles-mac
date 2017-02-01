@@ -7,3 +7,4 @@ set splitbelow
 set splitright
 set swapfile
 set dir=/tmp
+set number
