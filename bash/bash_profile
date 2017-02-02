@@ -44,3 +44,6 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
 else
     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+# k8s # TODO find a better place to put this (and don't commit it)
+export KOPS_STATE_STORE=s3://clusters.stg.k8s.uken.cloud/

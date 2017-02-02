@@ -1,7 +1,7 @@
 
 function write_bash_profile() {
   print_with_color $GREEN "writing $HOME/.bash_profile"
-  echo ". `pwd`/bash/bash_config" > $HOME/.bash_profile
+  echo ". `pwd`/bash/bash_profile" > $HOME/.bash_profile
 }
 
 function setup_bash_profile(){
