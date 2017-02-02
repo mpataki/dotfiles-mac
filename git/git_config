@@ -24,6 +24,7 @@
 [user]
   name = Mat Pataki
   email = matpataki@gmail.com
+	signingkey = 55C4011358AF1B6B
 [credential]
   helper = osxkeychain
 [help]
