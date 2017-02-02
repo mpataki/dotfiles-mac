@@ -5,8 +5,8 @@ function setup_git() {
     brew install git
   fi
 
-  check_and_link_file `pwd`/git/git_config $HOME/.gitconfig
-  check_and_link_file `pwd`/git/git_ignore $HOME/.gitignore
+  check_and_link_file `pwd`/git/gitconfig $HOME/.gitconfig
+  check_and_link_file `pwd`/git/gitignore $HOME/.gitignore
 
   if ! [[ `brew list | grep bash-completion` ]]; then
     print_with_color $GREEN 'installing git bash-completion'
