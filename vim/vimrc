@@ -9,3 +9,6 @@ set splitright
 set swapfile
 set dir=/tmp
 set number
+colorscheme darkblue
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
