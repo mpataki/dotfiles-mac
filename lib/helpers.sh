@@ -53,10 +53,11 @@ function download_app() {
 
 function homebrew_install() {
   app_name=$1
+  pkg=$2
   
   if ! [[ `brew list | grep $app_name` ]]; then
     print_with_color $YELLOW "Installing $app_name"
-    brew install $app_name
+    brew install $pkg
   fi
 }
 
