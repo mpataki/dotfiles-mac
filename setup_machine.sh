@@ -31,3 +31,4 @@ download_app 'Alfred' 'alfred'
 download_app 'Spectacle' 'spectacle'
 
 . $HOME/.bash_profile
+

@@ -1,11 +1,21 @@
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  ui = 1
+  ui = always
+[color "diff"]
+  meta = yellow bold
+  commit = green bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = "red bold 52"
+  newNormal = "green bold"
+  newHighlight = "green bold 22"
 [core]
   excludesfile = ~/.gitignore
-  editor = vi
+  editor = vim
+  pager = "diff-so-fancy | less --tabs=4 -RFX"
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
@@ -14,7 +24,7 @@
   a = add
   ap = add -p
   co = checkout
-  d = diff --word-diff
+  d = diff
   pl = pull --rebase
   ps = push
   s = status --short
@@ -32,4 +42,7 @@
 [hub]
 	protocol = https
 [include]
-        path = ~/.gitconfig.local
+  path = ~/.gitconfig.local
+[diff-so-fancy]
+  markEmptyLines = false
+
