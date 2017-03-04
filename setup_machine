@@ -28,8 +28,6 @@ homebrew_install 'pinentry-mac' 'pinentry-mac'
 
 download_app 'Google Chrome' 'google-chrome'
 download_app 'Alfred' 'alfred'
-download_app 'Dropbox' 'dropbox'
-download_app '1Password' '1password'
 download_app 'Spectacle' 'spectacle'
 
 . $HOME/.bash_profile
