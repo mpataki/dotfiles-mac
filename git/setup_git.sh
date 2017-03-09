@@ -2,7 +2,7 @@
 function setup_git() {
   if ! [[ -e `brew --prefix`/bin/git ]]; then
     print_with_color $GREEN 'installing git'
-    brew install git
+    brew install --HEAD git
   fi
 
   check_and_link_file `pwd`/git/gitconfig $HOME/.gitconfig

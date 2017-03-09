@@ -45,4 +45,6 @@
   path = ~/.gitconfig.local
 [diff-so-fancy]
   markEmptyLines = false
+[interactive]
+  diffFilter = "diff-so-fancy"
 
