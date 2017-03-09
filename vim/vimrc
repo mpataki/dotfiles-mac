@@ -12,3 +12,5 @@ set number
 colorscheme darkblue
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+autocmd BufWritePre * :%s/\s\+$//e

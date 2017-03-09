@@ -1,5 +1,9 @@
 
 function setup_gnupg() {
+  homebrew_install 'gnupg2' 'Caskroom/cask/gpgtools'
+  homebrew_install 'gpg-agent' 'gpg-agent'
+  homebrew_install 'pinentry-mac' 'pinentry-mac'
+
   if ! [ -d $HOME/.gnupg ]; then
     mkdir $HOME/.gnupg
   fi

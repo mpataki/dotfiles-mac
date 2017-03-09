@@ -29,7 +29,12 @@ function check_and_link_file() {
     read yn
     case $yn in
       yes )
-        rm -r "$destination"
+        if [ -d "$destination" ]; then
+          rm -rf "$destination"
+        else
+          rm "$destination"
+        fi
+
         link_file "$source_file" "$destination"
         ;;
       * ) print_with_color $GREEN 'skipping...';;
@@ -44,8 +49,15 @@ function download_app() {
   brew_app_name=$2
 
   if [[ ! `ls /Applications/ | grep "$app_file_name"` ]] && [[ ! -e `ls $HOME/Applications/ | grep "$app_file_name"` ]]; then
-    print_with_color $GREEN "$app_file_name is not installed. Downloading..."
-    brew cask install $brew_app_name
+    print_with_color $YELLOW "$app_file_name not found. Do you want to install it? (yes/no)"
+    read yn
+    case $yn in
+      yes )
+        print_with_color $GREEN "Downloading $app_file_name..."
+        brew cask install $brew_app_name
+        ;;
+      * ) print_with_color $GREEN 'skipping...';;
+    esac
   else
     print_with_color $YELLOW "$app_file_name already installed"
   fi
@@ -54,10 +66,28 @@ function download_app() {
 function homebrew_install() {
   app_name=$1
   pkg=$2
-  
+
   if ! [[ `brew list | grep $app_name` ]]; then
     print_with_color $YELLOW "Installing $app_name"
     brew install $pkg
   fi
+}
+
+function git_clone() {
+  repo=$1
+  dest=$2
+
+  if [ -e "$dest" ]; then
+    print_with_color $YELLOW "$dest already present. Do you want to overwrite it? (yes/no)"
+    read yn
+    case $yn in
+      yes )
+        rm -rf $dest
+        ;;
+      * ) print_with_color $GREEN 'skipping...'; return;;
+    esac
+  fi
+
+  git clone "$repo" "$dest"
 }
 

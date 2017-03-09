@@ -14,9 +14,6 @@ homebrew_install 'rbenv' 'rbenv'
 homebrew_install 'wget' 'wget'
 homebrew_install 'ag' 'ag'
 homebrew_install 'pass' 'pass'
-homebrew_install 'gpg-tools' 'Caskroom/cask/gpgtools'
-homebrew_install 'gpg-agent' 'gpg-agent'
-homebrew_install 'pinentry-mac' 'pinentry-mac'
 
 . bash/setup_bash.sh
 . git/setup_git.sh
