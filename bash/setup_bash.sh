@@ -4,7 +4,7 @@ function write_bash_profile() {
   echo ". `pwd`/bash/bash_profile" > $HOME/.bash_profile
 }
 
-function setup_bash_profile(){
+function setup_bash(){
   if [ -e $HOME/.bash_profile ]; then
     print_with_color $YELLOW "$HOME/.bash_profile already exists. Do you want to override it? (yes/no)"
     read yn
@@ -15,11 +15,13 @@ function setup_bash_profile(){
   else
     write_bash_profile
   fi
+
+  homebrew_install bash-completion bash-completion
 }
 
 print_with_color $YELLOW 'Setup Bash? (yes/no)'
 read yn
 case $yn in
-  yes ) setup_bash_profile;;
+  yes ) setup_bash;;
   * ) print_with_color $GREEN 'skipping...';;
 esac
