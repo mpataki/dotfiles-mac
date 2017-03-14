@@ -1,7 +1,11 @@
 
-# golang 
+# golang
 export GOPATH=$HOME/code/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# experimental
+export NOTES_S3_BUCKET=note-store
+export LOCAL_NOTE_STORE=$HOME/notes
 
