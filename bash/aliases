@@ -10,7 +10,6 @@ alias gd='git d'
 alias gc='git c'
 alias gpl='git pl'
 alias gps='git ps'
-alias pass='pass -c'
 
 # ruby
 alias be='bundle exec'
