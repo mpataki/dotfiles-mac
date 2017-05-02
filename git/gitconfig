@@ -39,8 +39,6 @@
   default = current
 [remote "origin"]
 	fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
-[hub]
-	protocol = https
 [include]
   path = ~/.gitconfig.local
 [diff-so-fancy]
