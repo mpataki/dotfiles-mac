@@ -5,7 +5,10 @@ export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+# unity
+export PATH=$PATH:/Applications/Unity/Unity.app/Contents/MacOS/
+
 # experimental
 export NOTES_S3_BUCKET=note-store
 export LOCAL_NOTE_STORE=$HOME/notes
-
+export NOTES_AWS_PROFILE=notes
