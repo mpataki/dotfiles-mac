@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>2</integer>
 	<key>AdjustWindowForFontSizeChange</key>
 	<false/>
 	<key>AllowClipboardAccess</key>
@@ -2549,15 +2553,15 @@
 	<key>NSWindow Frame Preferences</key>
 	<string>213 565 606 456 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUStatusFrame</key>
-	<string>-631 -214 400 129 -1200 -480 1200 1897 </string>
+	<string>1842 491 400 129 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>970 786 620 392 0 0 2560 1440 </string>
+	<string>970 787 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>768 763 918 498 0 0 2560 1440 </string>
+	<string>768 762 796 473 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 5 2560 1435 0 0 2560 1440 </string>
+	<string>0 4 1680 1046 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>4 449 570 451 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -3413,7 +3417,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/mat/config_files/iterm/</string>
+	<string>/Users/mat/dotfiles/iterm/</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
@@ -3433,7 +3437,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-01-18T22:11:45Z</date>
+	<date>2017-05-31T15:26:00Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>Show Toolbelt</key>
@@ -3487,7 +3491,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.13</string>
+	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
