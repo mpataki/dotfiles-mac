@@ -22,6 +22,7 @@ homebrew_install 'pass' 'pass'
 . atom/setup_atom.sh
 . iterm/setup_iterm.sh
 . gnupg/setup_gnupg.sh
+. tmux/setup_tmux.sh
 
 download_app 'Google Chrome' 'google-chrome'
 download_app 'Alfred' 'alfred'
