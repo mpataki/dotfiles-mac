@@ -6,6 +6,7 @@ function setup_vim(){
   fi
 
   git_clone https://github.com/ctrlpvim/ctrlp.vim.git ~/.vim/bundle/ctrlp.vim
+  git_clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/airline.vim
 }
 
 print_with_color $YELLOW 'Setup Vim? (yes/no)'

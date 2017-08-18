@@ -11,6 +11,7 @@ set dir=/tmp
 colorscheme darkblue
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set runtimepath^=~/.vim/bundle/airline.vim
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -18,3 +19,4 @@ set backspace=indent,eol,start
 
 " copy to the clipboard when using yy
 set clipboard=unnamed
+
