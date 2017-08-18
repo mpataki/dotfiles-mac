@@ -15,3 +15,6 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 autocmd BufWritePre * :%s/\s\+$//e
 
 set backspace=indent,eol,start
+
+" copy to the clipboard when using yy
+set clipboard=unnamed
