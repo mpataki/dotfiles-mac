@@ -1,4 +1,5 @@
 function setup_vim(){
+  homebrew_install vim vim
   check_and_link_file `pwd`/vim/vimrc $HOME/.vimrc
 
   if ! [ -e ~/.vim ]; then
