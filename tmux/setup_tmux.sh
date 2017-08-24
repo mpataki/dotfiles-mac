@@ -4,6 +4,7 @@
 
 function setup_tmux() {
   homebrew_install tmux tmux
+  homebrew_install reattach-to-user-namespace reattach-to-user-namespace
 
   check_and_link_file `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 }
