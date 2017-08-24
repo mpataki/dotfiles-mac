@@ -26,9 +26,6 @@ if [ -d /Users/mat/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
-# omnisharp dependency
-source dnvm.sh
-
 # VS Code
 function code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $*; }
 
