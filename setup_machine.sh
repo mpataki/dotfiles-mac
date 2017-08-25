@@ -10,11 +10,6 @@ fi
 print_with_color $GREEN 'Updating Homebrew'
 brew update
 
-homebrew_install 'rbenv' 'rbenv'
-homebrew_install 'wget' 'wget'
-homebrew_install 'pass' 'pass'
-homebrew_install 'jq' 'jq'
-
 . bash/setup_bash.sh
 . git/setup_git.sh
 . vim/setup_vim.sh
@@ -23,10 +18,7 @@ homebrew_install 'jq' 'jq'
 . iterm/setup_iterm.sh
 . gnupg/setup_gnupg.sh
 . tmux/setup_tmux.sh
-
-download_app 'Google Chrome' 'google-chrome'
-download_app 'Alfred' 'alfred'
-download_app 'Spectacle' 'spectacle'
+. misc_tools/setup_misc_tools.sh
+. macos_apps/setup_macos_apps.sh
 
 . $HOME/.bash_profile
-
