@@ -88,6 +88,7 @@ function git_clone() {
     esac
   fi
 
+  mkdir -p $dest
   git clone "$repo" "$dest"
 }
 
