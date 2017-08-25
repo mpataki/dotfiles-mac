@@ -12,8 +12,8 @@ brew update
 
 homebrew_install 'rbenv' 'rbenv'
 homebrew_install 'wget' 'wget'
-homebrew_install 'ag' 'ag'
 homebrew_install 'pass' 'pass'
+homebrew_install 'jq' 'jq'
 
 . bash/setup_bash.sh
 . git/setup_git.sh
