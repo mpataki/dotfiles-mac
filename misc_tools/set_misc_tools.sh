@@ -3,6 +3,7 @@ function setup_misc_tools() {
   homebrew_install 'rbenv' 'rbenv'
   homebrew_install 'wget' 'wget'
   homebrew_install 'jq' 'jq'
+  homebrew_install 'htop' 'htop'
 }
 
 print_with_color $YELLOW 'Setup misc tools? (yes/no)'
