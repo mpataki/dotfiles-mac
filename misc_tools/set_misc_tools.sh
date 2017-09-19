@@ -4,6 +4,7 @@ function setup_misc_tools() {
   homebrew_install 'wget' 'wget'
   homebrew_install 'jq' 'jq'
   homebrew_install 'htop' 'htop'
+  homebrew_install 'the_silver_searcher' 'the_silver_searcher'
 }
 
 print_with_color $YELLOW 'Setup misc tools? (yes/no)'
