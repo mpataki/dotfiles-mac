@@ -12,6 +12,7 @@ colorscheme darkblue
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/airline.vim
+set runtimepath^=~/.vim/bundle/ack.vim
 
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -20,3 +21,10 @@ set backspace=indent,eol,start
 " copy to the clipboard when using yy
 set clipboard=unnamed
 
+" The Silver Searcher
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" alias Ag to Ack
+command -nargs=* Ag Ack
