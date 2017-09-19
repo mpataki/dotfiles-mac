@@ -26,6 +26,3 @@ if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-" alias ag to Ack
-command -nargs=* Ag Ack
-cnoreabbrev ag Ag
