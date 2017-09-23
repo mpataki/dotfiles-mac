@@ -13,11 +13,9 @@ brew update
 . bash/setup_bash.sh
 . git/setup_git.sh
 . vim/setup_vim.sh
-. sublime/setup_sublime.sh
-. atom/setup_atom.sh
-. iterm/setup_iterm.sh
 . gnupg/setup_gnupg.sh
 . tmux/setup_tmux.sh
+. iterm/setup_iterm.sh
 . misc_tools/setup_misc_tools.sh
 . macos_apps/setup_macos_apps.sh
 
