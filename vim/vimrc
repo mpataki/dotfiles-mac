@@ -8,11 +8,11 @@ set splitbelow
 set splitright
 set swapfile
 set dir=/tmp
-colorscheme darkblue
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/airline.vim
 set runtimepath^=~/.vim/bundle/ack.vim
+set runtimepath^=~/.vim/bundle/jellygrass.vim/colors/jellygrass.vim
 
 autocmd BufWritePre * :%s/\s\+$//e
 
