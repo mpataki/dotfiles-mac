@@ -1,4 +1,6 @@
 syntax on
+colorscheme dzo
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -12,15 +14,12 @@ set dir=/tmp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/airline.vim
 set runtimepath^=~/.vim/bundle/ack.vim
-set runtimepath^=~/.vim/bundle/jellygrass.vim/colors/jellygrass.vim
 
 autocmd BufWritePre * :%s/\s\+$//e
 
 set backspace=indent,eol,start
-
 " copy to the clipboard when using yy
 set clipboard=unnamed
-
 " The Silver Searcher
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
