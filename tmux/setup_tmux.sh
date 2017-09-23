@@ -6,8 +6,9 @@ function setup_tmux() {
   homebrew_install tmux tmux
   homebrew_install reattach-to-user-namespace reattach-to-user-namespace
 
-  # install the tmux package manager
-  git_clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  git_clone https://github.com/tmux-plugins/tmux-resurrect $HOME/.tmux/plugins/tmux-resurrect
+  git_clone https://github.com/tmux-plugins/tmux-continuum $HOME/.tmux/plugins/tmux-continuum
+  git_clone https://github.com/tmux-plugins/tmux-sensible $HOME/.tmux/plugins/tmux-sensible
 
   check_and_link_file `pwd`/tmux/tmux.conf $HOME/.tmux.conf
 }
