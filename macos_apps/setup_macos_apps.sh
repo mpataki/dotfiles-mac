@@ -5,7 +5,7 @@ function setup_macos_apps() {
   download_app 'Spectacle' 'spectacle'
 }
 
-print_with_color $YELLOW 'Setup misc tools? (yes/no)'
+print_with_color $YELLOW 'Setup macOS apps? (yes/no)'
 read yn
 case $yn in
   yes ) setup_macos_apps;;
