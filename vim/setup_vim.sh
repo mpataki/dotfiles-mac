@@ -4,7 +4,6 @@ function setup_vim(){
 
   git_clone https://github.com/ctrlpvim/ctrlp.vim.git $HOME/.vim/bundle/ctrlp.vim
   git_clone https://github.com/vim-airline/vim-airline.git $HOME/.vim/bundle/airline.vim
-  git clone https://github.com/mileszs/ack.vim.git $HOME/.vim/bundle/ack.vim
 
   check_and_link_file `pwd`/vim/colors $HOME/.vim/colors
 }

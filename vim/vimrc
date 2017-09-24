@@ -9,20 +9,46 @@ set wildmode=list:longest
 let g:netrw_liststyle=3
 set splitbelow
 set splitright
-set swapfile
 set dir=/tmp
+
+" auto read files that are change outside of the vim session (when you run a command in vim)
+set autoread
+
+" Highlight search results
+set hlsearch
+
+" Makes search act like search in modern browsers
+set incsearch
+
+" turn off swap / auto backup
+set nobackup
+set nowb
+set noswapfile
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 set runtimepath^=~/.vim/bundle/airline.vim
-set runtimepath^=~/.vim/bundle/ack.vim
 
+" strip trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" fix backspace on mac
 set backspace=indent,eol,start
+
 " copy to the clipboard when using yy
 set clipboard=unnamed
+
 " The Silver Searcher
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+
+  " bind \ (backward slash) to grep shortcut
+  command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 endif
 
