@@ -1,5 +1,6 @@
 syntax on
-colorscheme dzo
+let g:neodark#terminal_transparent = 1 " use the default terminal background
+colorscheme neodark
 
 set expandtab
 set tabstop=2
