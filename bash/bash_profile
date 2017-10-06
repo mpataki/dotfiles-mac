@@ -54,3 +54,5 @@ function mark () {
 # MySQL 5.6
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
+# python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
