@@ -14,9 +14,6 @@ set dir=/tmp
 " auto read files that are change outside of the vim session (when you run a command in vim)
 set autoread
 
-" Highlight search results
-set hlsearch
-
 " Makes search act like search in modern browsers
 set incsearch
 
@@ -52,3 +49,4 @@ if executable('ag')
   command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 endif
 
+autocmd BufRead *.sql set filetype=mysql
