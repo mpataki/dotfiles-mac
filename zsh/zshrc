@@ -101,6 +101,8 @@ compinit
 
 bindkey -v '^?' backward-delete-char # backspace behaviour aligned with vim behaviour
 
+alias e='vim'
+
 # tmux
 alias ta='tmux -CC attach -t'
 alias tad='tmux -CC attach -d -t'
