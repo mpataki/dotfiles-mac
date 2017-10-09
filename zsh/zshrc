@@ -1,7 +1,9 @@
 # Path to oh-my-zsh
 export ZSH=/Users/mat/.oh-my-zsh
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="geometry/geometry"
+GEOMETRY_PROMPT_PLUGINS=(exec_time git)
 
 # Plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -16,8 +18,6 @@ SAVEHIST=1000
 unsetopt autocd extendedglob nomatch
 bindkey -v
 
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
 zstyle :compinstall filename '/Users/mat/.zshrc'
 
 autoload -Uz compinit
@@ -34,8 +34,8 @@ fi
 
 SCRIPT_DIR=$0:A:h
 
-. $SCRIPT_DIR/../shell/aliases
-. $SCRIPT_DIR/../shell/environment
+. $SCRIPT_DIR/shell/aliases
+. $SCRIPT_DIR/shell/environment
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
