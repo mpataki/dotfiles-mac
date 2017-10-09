@@ -32,33 +32,10 @@ if [[ `brew list | grep hub` ]]; then
   autoload -U compinit && compinit
 fi
 
-alias e='vim'
+SCRIPT_DIR=$0:A:h
 
-# tmux
-alias ta='tmux -CC attach -t'
-alias tad='tmux -CC attach -d -t'
-alias ts='tmux -CC new-session -s'
-alias tl='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
-
-# git
-alias g='git'
-alias gadd='git add -u && git add . && git status --short'
-alias gs='git status --short'
-alias gap='git add --patch'
-alias ga='git add'
-alias gd='git diff'
-alias gc='git commit -m'
-alias gpl='git pull --rebase'
-alias gps='git push'
-alias gco='git checkout'
-alias gcp='git cherry-pick'
-alias gpr='git pull-request'
-alias gb='git brach --all --verbose'
-
-# ruby
-alias be='bundle exec'
+. $SCRIPT_DIR/../shell/aliases
+. $SCRIPT_DIR/../shell/environment
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
