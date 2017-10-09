@@ -12,15 +12,6 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   __git_complete 'g co' _git_checkout
 fi
 
-# subl command
-if [ -d /Applications/Sublime\ Text.app/Contents/SharedSupport/bin ]; then
-  PATH=$PATH:/Applications/Sublime\ Text.app/Contents/SharedSupport/bin
-elif [ -d /Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin ]; then
-  PATH=$PATH:/Applications/Sublime\ Text\ 3.app/Contents/SharedSupport/bin
-elif [ -d /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin ]; then
-  PATH=$PATH:/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin
-fi
-
 # rbenv
 if [ -d /Users/mat/.rbenv ]; then
   eval "$(rbenv init -)"
