@@ -1,9 +1,12 @@
 # Path to oh-my-zsh
 export ZSH=/Users/mat/.oh-my-zsh
 
+# theme
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="geometry/geometry"
 GEOMETRY_PROMPT_PLUGINS=(exec_time git)
+PROMPT_GEOMETRY_GIT_CONFLICTS=true
+GEOMETRY_COLOR_GIT_BRANCH=cyan
 
 # Plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -34,8 +37,8 @@ fi
 
 SCRIPT_DIR=$0:A:h
 
-. $SCRIPT_DIR/shell/aliases
-. $SCRIPT_DIR/shell/environment
+. $SCRIPT_DIR/../shell/aliases
+. $SCRIPT_DIR/../shell/environment
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
