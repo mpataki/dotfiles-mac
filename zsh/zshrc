@@ -113,7 +113,7 @@ alias tkss='tmux kill-session -t'
 
 # git
 alias g='git'
-alias gadd='git add -u && git add . && git s'
+alias gadd='git add -u && git add . && git status --short'
 alias gs='git status --short'
 alias gap='git add --patch'
 alias ga='git add'
