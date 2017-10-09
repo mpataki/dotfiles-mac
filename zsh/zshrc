@@ -7,6 +7,8 @@ ZSH_THEME="geometry/geometry"
 GEOMETRY_PROMPT_PLUGINS=(exec_time git)
 PROMPT_GEOMETRY_GIT_CONFLICTS=true
 GEOMETRY_COLOR_GIT_BRANCH=cyan
+GEOMETRY_SYMBOL_PROMPT="▶ "
+GEOMETRY_SYMBOL_EXIT_VALUE="▷ "
 
 # Plugins to load (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
