@@ -2,8 +2,10 @@
   excludesfile = ~/.gitignore
   editor = vim
   pager = "diff-so-fancy | less --tabs=4 -RFX"
+
 [color]
   ui = always
+
 [color "diff"]
   meta = yellow bold
   commit = green bold
@@ -11,39 +13,40 @@
   old = red bold
   new = green bold
   whitespace = red reverse
+
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = "red bold 52"
   newNormal = "green bold"
   newHighlight = "green bold 22"
+
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
+
 [alias]
-  b = branch -a -v
-  c = commit -m
-  a = add
-  ap = add -p
   co = checkout
-  d = diff
-  pl = pull --rebase
-  ps = push
-  s = status --short
-  cp = cherry-pick
   pr = pull-request
   merged = log --date-order --tags --simplify-by-decoration --pretty=format:\"%Cblue%h %Cgreen%<|(20)[%cr]%Creset %C(auto)%<|(41)%d %s\"
   ob = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+
 [credential]
   helper = osxkeychain
+
 [help]
   autocorrect = 1
+
 [push]
   default = current
+
 [remote "origin"]
 	fetch = +refs/pull/*/head:refs/remotes/origin/pull/*
+
 [include]
   path = ~/.gitconfig.local
+
 [diff-so-fancy]
   markEmptyLines = false
+
 [interactive]
   diffFilter = "diff-so-fancy"
 

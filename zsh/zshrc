@@ -109,3 +109,27 @@ alias tl='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
+# git
+alias g='git'
+alias gadd='git add -u && git add . && git s'
+alias gs='git status --short'
+alias gap='git add --patch'
+alias ga='git add'
+alias gd='git diff'
+alias gc='git commit -m'
+alias gpl='git pull --rebase'
+alias gps='git push'
+alias gco='git checkout'
+alias gcp='git cherry-pick'
+alias gpr='git pull-request'
+alias gb='git brach --all --verbose'
+
+# ruby
+alias be='bundle exec'
+
+# hub (Github git extension)
+if [[ `brew list | grep hub` ]]; then
+  eval "$(hub alias -s)"
+  fpath=(~/.zsh/completions $fpath)
+  autoload -U compinit && compinit
+fi

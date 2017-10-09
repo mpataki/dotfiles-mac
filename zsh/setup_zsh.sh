@@ -5,6 +5,10 @@ function setup_zsh(){
 
   check_and_link_file `pwd`/zsh/zshrc $HOME/.zshrc
 
+  # hub completions
+  mkdir -p ~/.zsh/completions
+  cp /usr/local/share/zsh/site-functions/_hub ~/.zsh/completions/_hub
+
   print_with_color $YELLOW 'Do you want to set zsh as the default shell? (yes/no)'
   read yn
   case $yn in
