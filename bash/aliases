@@ -21,5 +21,3 @@ alias be='bundle exec'
 # system
 alias ls='ls -G' # turn on colors
 
-# experimental
-alias notesync='aws s3 sync s3://note-store ~/notes && aws s3 sync ~/notes s3://note-store'
