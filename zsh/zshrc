@@ -25,10 +25,11 @@ bindkey -v
 
 zstyle :compinstall filename '/Users/mat/.zshrc'
 
-autoload -Uz compinit
-compinit
-
 bindkey -v '^?' backward-delete-char # backspace behaviour aligned with vim behaviour
+
+# enable reverse search
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 # hub (Github git extension)
 if [[ `brew list | grep hub` ]]; then
@@ -36,6 +37,18 @@ if [[ `brew list | grep hub` ]]; then
   fpath=(~/.zsh/completions $fpath)
   autoload -U compinit && compinit
 fi
+
+# Marked 2
+function mark () {
+  if [ $1 ]; then
+    open -a "Marked 2" $1
+  else
+    open -a "Marked 2"
+  fi
+}
+
+# python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 SCRIPT_DIR=$0:A:h
 
