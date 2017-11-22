@@ -12,3 +12,6 @@ export PATH=$PATH:/Applications/Unity/Unity.app/Contents/MacOS/
 export NOTES_S3_BUCKET=note-store
 export LOCAL_NOTE_STORE=$HOME/notes
 export NOTES_AWS_PROFILE=notes
+
+#java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
