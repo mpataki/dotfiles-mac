@@ -19,5 +19,6 @@ brew update
 . zsh/setup_zsh.sh
 . misc_tools/setup_misc_tools.sh
 . macos_apps/setup_macos_apps.sh
+. marked/setup_marked.sh
 
 . $HOME/.bash_profile
