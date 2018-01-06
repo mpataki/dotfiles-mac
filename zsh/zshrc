@@ -58,6 +58,11 @@ if [ -d $HOME/.rbenv ]; then
   eval "$(rbenv init -)"
 fi
 
+# kubectl
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
 SCRIPT_DIR=$0:A:h
 
 . $SCRIPT_DIR/../shell/aliases
