@@ -2,6 +2,7 @@
 
 function setup_tmux() {
   homebrew_install tmux tmux
+  homebrew_install reattach-to-user-namespace reattach-to-user-namespace
 
   git_clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
