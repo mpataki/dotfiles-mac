@@ -10,6 +10,7 @@ let g:netrw_liststyle=3
 set splitbelow
 set splitright
 set dir=/tmp
+set tabpagemax=100
 
 " auto read files that are change outside of the vim session (when you run a command in vim)
 set autoread
