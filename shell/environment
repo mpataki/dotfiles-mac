@@ -8,6 +8,8 @@ export PATH=$PATH:$GOROOT/bin
 # unity
 export PATH=$PATH:/Applications/Unity/Unity.app/Contents/MacOS/
 
+export PATH=$(pyenv root)/shims:$PATH
+
 #java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
