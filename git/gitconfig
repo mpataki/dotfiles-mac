@@ -48,7 +48,8 @@
   markEmptyLines = false
 
 [interactive]
-  diffFilter = "diff-so-fancy"
+  # diffFilter = "diff-so-fancy"
+  diffFilter = "diff-highlight"
 
 [filter "lfs"]
 	clean = git-lfs clean %f
