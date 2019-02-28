@@ -55,3 +55,7 @@
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[commit]
+	gpgsign = true
+[user]
+	signingkey = 4B5A975D4DE22696

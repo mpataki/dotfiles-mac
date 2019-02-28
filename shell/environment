@@ -13,4 +13,8 @@ export PATH=$(pyenv root)/shims:$PATH
 #java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+#gpg
+export GPG_TTY=$(tty)
+
 source $HOME/.env
+
